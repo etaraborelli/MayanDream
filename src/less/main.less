@@ -64,15 +64,84 @@ h2 {
 
 
 /**
- * Navigation
+ * Header
  */
 
+header {
+  width: 100%;
+  background-color: rgb(167,168,154);
+  -webkit-box-shadow: 0px 5px 14px 1px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 5px 14px 1px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 5px 14px 1px rgba(50, 50, 50, 0.75);
+
+  .logo {
+    float: none;
+  }
+}
+
+
 .navbar {
-  margin-top: 20px;
-  
+  margin: 20px auto 0;
+  float: none;
+
+  border: 1px solid #497D01;
+  border-radius: 20px 20px 0 0;
+  background: #85b83f; /* Old browsers */
+  background: -moz-linear-gradient(top,  #85b83f 0%, #85b83f 50%, #6eac1b 51%, #6eac1b 99%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#85b83f), color-stop(50%,#85b83f), color-stop(51%,#6eac1b), color-stop(99%,#6eac1b)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #85b83f 0%,#85b83f 50%,#6eac1b 51%,#6eac1b 99%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #85b83f 0%,#85b83f 50%,#6eac1b 51%,#6eac1b 99%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #85b83f 0%,#85b83f 50%,#6eac1b 51%,#6eac1b 99%); /* IE10+ */
+  background: linear-gradient(to bottom,  #85b83f 0%,#85b83f 50%,#6eac1b 51%,#6eac1b 99%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#85b83f', endColorstr='#6eac1b',GradientType=0 ); /* IE6-9 */
+
   small {
     font-size: 60%;
   }
+
+  .navbar-nav {
+    width: 100%;
+
+    li {
+      text-align: center;
+
+      a {
+        color: white;
+      }
+
+      a:hover {
+        background-color: rgba(61, 80, 63, 0.45);
+        color: white;
+      }
+    }
+
+    .active {
+      a, a:hover {
+        background-color: rgba(61, 80, 63, 0.45);
+        color: white;
+      }
+    }
+  }
+}
+
+/*
+ * Content
+ */
+
+body {
+  background-color: #8f8c7d;
+  height: 0px;
+}
+
+.container {
+  float: none;
+  padding: 30px 70px;
+  z-index: -1;
+  background-color: white;
+}
+
+h1, h2 {
+  color: #ffb94d;
 }
 
 
@@ -81,33 +150,15 @@ h2 {
  */
 
 .footer {
-  margin-top: 80px;
+  background-color: #a7a89a;
+  border-top: 9px solid #6eac1d;
+  -webkit-box-shadow: 0px -5px 14px 1px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px -5px 14px 1px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px -5px 14px 1px rgba(50, 50, 50, 0.75);
 
   .footer-inner {
-    padding: 40px 0;
-    border-top: 1px solid #DDD;
-  }
-
-  .social {
-    float: right;
-    margin: 0;
-    list-style: none;
-
-    li {
-      float: left;
-      margin-left: 20px;
-
-      a, a:visited {
-        color: @gray-light;
-        text-decoration: none;
-        font-size: 40px;
-        .transition( 250ms ease-in-out );
-
-        &:hover {
-          color: @gray;
-        }
-      }
-    }
+    float: none;
+    padding: 40px 30px;
   }
 }
 
@@ -120,4 +171,5 @@ h2 {
  */
 
 @import '../app/home/home.less';
+@import '../app/kin/kin.less';
 

@@ -1,6 +1,5 @@
 angular.module( 'mayanDream.about', [
   'ui.router',
-  'placeholders',
   'ui.bootstrap'
 ])
 

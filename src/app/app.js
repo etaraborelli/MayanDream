@@ -5,7 +5,6 @@ angular.module( 'mayanDream', [
   'mayanDream.kin',
   'mayanDream.about',
   'ui.router',
-  'placeholders',
   'ui.bootstrap'
 ])
 

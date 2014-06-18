@@ -14,8 +14,7 @@
  */
 angular.module('mayanDream.kin', [
   'ui.router',
-  'ui.bootstrap',
-  'angularMoment'
+  'ui.bootstrap'
 ])
 
 /**

@@ -40,7 +40,6 @@ angular.module( 'mayanDream.home', [
  */
 .controller( 'HomeCtrl', function HomeController( $scope, $modal ) {
   $scope.open = function (modal) {
-
     var modalInstance = $modal.open({
       templateUrl: modal
       //controller: ModalInstanceCtrl

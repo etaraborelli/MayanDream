@@ -1,45 +1,70 @@
-<div class="container">
-  <h1>Get your Kin</h1>
-  <h3>Select the date</h3>
-  <form novalidate class="simple-form">
-    <input type="number" ng-model="date.month" min="1" max="12" integer placeholder="Month"/> /
-    <input type="number" ng-model="date.day" min="1" max="31" integer placeholder="Day"/> /
-    <input type="number" ng-model="date.year" integer placeholder="Year"/>
-    <button ng-click="getKinInfo(date)">Calculate</button>
-    <button ng-click="getKinInfo('today')">Get today Kin</button>
-    <span ng-show="form.size.$error.min || form.size.$error.max">
-      The value is out of range!
-    </span>
-  </form>
-  <div class="row">
-    <div class="col-md-4">
-      <img ng-src="{{ kin.destiny.imgUrl }}" alt="">
-      <img ng-src="{{ kin.guide.imgUrl }}" alt="">
-      <img ng-src="{{ kin.analogue.imgUrl }}" alt="">
-      <img ng-src="{{ kin.antipode.imgUrl }}" alt="">
-      <img ng-src="{{ kin.hidden.imgUrl }}" alt="">
-      <div ng-show="kin">
-        <span>Last Kin-Birthday: {{ kin.kinBirthdays[0] | date:'MM/dd/yyyy' }}</span><br>
-        <span>Next Kin-Birthday: {{ kin.kinBirthdays[1] | date:'MM/dd/yyyy' }}</span>
-      </div>
+<h1>Get your Kin</h1>
+<h3>Select the date</h3>
+<form novalidate class="simple-form">
+  <input type="number" ng-model="date.month" min="1" max="12" integer placeholder="Month"/> /
+  <input type="number" ng-model="date.day" min="1" max="31" integer placeholder="Day"/> /
+  <input type="number" ng-model="date.year" integer placeholder="Year"/>
+  <button ng-click="getKinInfo(date)">Calculate</button>
+  <button ng-click="getKinInfo('today')">Get today Kin</button>
+  <span ng-show="form.size.$error.min || form.size.$error.max">
+    The value is out of range!
+  </span>
+</form>
+<div class="kinsContainer row">
+  <div class="leftColumn col-md-6">
+
+    <table>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <img ng-src="{{ kin.guide.imgUrl }}" alt="">
+        </td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img ng-src="{{ kin.antipode.imgUrl }}" alt="">
+        </td>
+        <td>
+          <img ng-src="{{ kin.destiny.imgUrl }}" alt="">
+        </td>
+        <td>
+          <img ng-src="{{ kin.analogue.imgUrl }}" alt="">
+        </td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>
+          <img ng-src="{{ kin.hidden.imgUrl }}" alt="">
+        </td>
+        <td>
+        </td>
+      </tr>
+    </table>
+    <div ng-show="kin">
+      <span>Last Kin-Birthday: {{ kin.kinBirthdays[0] | date:'MM/dd/yyyy' }}</span><br>
+      <span>Next Kin-Birthday: {{ kin.kinBirthdays[1] | date:'MM/dd/yyyy' }}</span>
     </div>
-    <div class="col-md-8">
-      <h3 ng-show="kin">Your kin is:</h3>
-      <img ng-src="{{ kin.destiny.imgUrl }}" alt="">{{ kin.destiny.color }} {{ kin.destiny.toneName }} {{ kin.destiny.sealName }} <br>
-      
-      <h3 ng-show="kin">Your guide is:</h3>
-      <img ng-src="{{ kin.guide.imgUrl }}" alt="">{{ kin.guide.color }} {{ kin.guide.toneName }} {{ kin.guide.sealName }} <br>
-      
-      <h3 ng-show="kin">Your analogue is:</h3>
-      <img ng-src="{{ kin.analogue.imgUrl }}" alt="">{{ kin.analogue.color }} {{ kin.analogue.toneName }} {{ kin.analogue.sealName }} <br>
-      
-      <h3 ng-show="kin">Your antipode is:</h3>
-      <img ng-src="{{ kin.antipode.imgUrl }}" alt="">{{ kin.antipode.color }} {{ kin.antipode.toneName }} {{ kin.antipode.sealName }} <br>
-      
-      <h3 ng-show="kin">Your hidden is:</h3>
-      <img ng-src="{{ kin.hidden.imgUrl }}" alt="">{{ kin.hidden.color }} {{ kin.hidden.toneName }} {{ kin.hidden.sealName }} <br>
-      
-      
-    </div>
+  </div>
+  <div class="col-md-6">
+    <h3 ng-show="kin">Your kin is:</h3>
+    <img ng-src="{{ kin.destiny.imgUrl }}" alt="">{{ kin.destiny.color }} {{ kin.destiny.toneName }} {{ kin.destiny.sealName }} <br>
+    
+    <h3 ng-show="kin">Your guide is:</h3>
+    <img ng-src="{{ kin.guide.imgUrl }}" alt="">{{ kin.guide.color }} {{ kin.guide.toneName }} {{ kin.guide.sealName }} <br>
+    
+    <h3 ng-show="kin">Your analogue is:</h3>
+    <img ng-src="{{ kin.analogue.imgUrl }}" alt="">{{ kin.analogue.color }} {{ kin.analogue.toneName }} {{ kin.analogue.sealName }} <br>
+    
+    <h3 ng-show="kin">Your antipode is:</h3>
+    <img ng-src="{{ kin.antipode.imgUrl }}" alt="">{{ kin.antipode.color }} {{ kin.antipode.toneName }} {{ kin.antipode.sealName }} <br>
+    
+    <h3 ng-show="kin">Your hidden is:</h3>
+    <img ng-src="{{ kin.hidden.imgUrl }}" alt="">{{ kin.hidden.color }} {{ kin.hidden.toneName }} {{ kin.hidden.sealName }} <br>
+    
+    
   </div>
 </div>
